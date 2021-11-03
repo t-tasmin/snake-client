@@ -5,9 +5,10 @@ let connection;
 const setupInput = function(conn) {
   const stdin = process.stdin;
   stdin.setRawMode(true);
-  conn.setEncoding("utf8");
   stdin.setEncoding("utf8");
   stdin.resume();
+
+  conn.setEncoding("utf8");
 
   stdin.on("data", (key) => {
 
