@@ -5,7 +5,7 @@ const {setupInput} = require('./input');
 
 
 console.log("Connecting ...");
-connect();
+let conn = connect();
 
 //Taking inputs from Keyboard
-setupInput();
+setupInput(conn);
