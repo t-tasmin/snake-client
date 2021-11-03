@@ -16,9 +16,10 @@ const connect = function() {
     conn.write('Name: TAN!'); // writing to server
   });
 
+  /*
   conn.on('connect', () => {
     let b = 0;
-
+    
     for (let i = 0; i < 20; i++) {
       setTimeout(()=> conn.write("Move: right"), 50 * i);
       b = 50 * i;
@@ -28,11 +29,9 @@ const connect = function() {
       setTimeout(()=> conn.write("Move: up"), b + 50 * i);
       b = b + 50 * i;
     }
-   
-   
-   
+     
   });// end of connect event to move
-  
+  */
  
   conn.on('data', (data) => {
     console.log('Server says: ', data);// data from server
