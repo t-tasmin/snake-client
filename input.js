@@ -3,29 +3,30 @@ let connection;
 
 // setup interface to handle user input from stdin
 const setupInput = function(conn) {
+  connection =conn;
+  connection.setEncoding("utf8");
+
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
   stdin.resume();
 
-  conn.setEncoding("utf8");
-
-  stdin.on("data", (key) => {
+   stdin.on("data", (key) => {
 
     if (key === 'w') {
-      conn.write("Move: up");
+      connection.write("Move: up");
     }
-
+ 
     if (key === 'a') {
-      conn.write("Move: left");
+      connection.write("Move: left");
     }
 
     if (key === 's') {
-      conn.write("Move: down");
+      connection.write("Move: down");
     }
 
     if (key === 'd') {
-      conn.write("Move: right");
+      connection.write("Move: right");
     }
 
     if (key === '\u0003') {
