@@ -14,9 +14,8 @@ const setupInput = function(conn) {
    stdin.on("data", (key) => {
 
     if (key === 'l') {
-      connection.write("Name: Funny Game!!");
+      connection.write("Say: Funny Game!!");
     }
-
 
     if (key === 'w') {
       connection.write("Move: up");
